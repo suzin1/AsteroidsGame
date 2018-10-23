@@ -1,7 +1,17 @@
 class Spaceship extends Floater  
 {   
     //your code here
-    
+    public Spaceship(){
+      corners = 4;
+      int[] xS = {-8, 16, -8, -2};
+      int[] yS = {-8, 0, 8, 0};
+      xCorners = xS;
+      yCorners = yS;
+      myColor = 3;   
+      myCenterX = myCenterY = 600.00; //holds center coordinates   
+      myDirectionX = myDirectionY; //holds x and y coordinates of the vector for direction of travel   
+      myPointDirection = Math.cos(2.3);
+    }
     public void accelerate (double dAmount)   
   {          
     //convert the current direction the floater is pointing to radians    
