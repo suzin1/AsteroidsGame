@@ -1,4 +1,5 @@
 //your variable declarations here
+
 public void setup() 
 {
   //your code here
@@ -7,5 +8,7 @@ public void setup()
 public void draw() 
 {
   //your code here
-  background(0);
+  //background(0);
+  Spaceship bob = new Spaceship();
+  bob.show();
 }

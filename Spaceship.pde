@@ -7,10 +7,10 @@ class Spaceship extends Floater
       int[] yS = {-8, 0, 8, 0};
       xCorners = xS;
       yCorners = yS;
-      myColor = 3;   
+      myColor = 0;   
       myCenterX = myCenterY = 350; //holds center coordinates   
-      myDirectionX = myDirectionY; //holds x and y coordinates of the vector for direction of travel   
-      myPointDirection = Math.cos(2.3);
+      myDirectionX = myDirectionY = 0; //holds x and y coordinates of the vector for direction of travel   
+      myPointDirection = 0;
     }
     public void accelerate (double dAmount)   
   {          
