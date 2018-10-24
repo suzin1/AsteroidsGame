@@ -11,4 +11,9 @@ public void draw()
   //background(0);
   Spaceship bob = new Spaceship();
   bob.show();
+  keyPressed();
+  
+}
+public void keyPressed(){
+  
 }
