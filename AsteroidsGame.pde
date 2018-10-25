@@ -4,7 +4,7 @@ public void setup()
 {
   //your code here
   size(700,700);
-  stars = new Star[100];
+  stars = new Star[50];
   for (int i = 0; i < stars.length; i++){
     stars[i] = new Star();
   }
@@ -12,15 +12,15 @@ public void setup()
 public void draw() 
 {
   //your code here
-  //background(0);
+  background(0);
   Spaceship bob = new Spaceship();
   bob.show();
-  //keyPressed();
+  keyPressed();
   for (int i=0;i<stars.length;i++){
   stars[i].show();
   stars[i].move();
   }
 }
-//public void keyPressed(){
+public void keyPressed(){
   
-//}
+}

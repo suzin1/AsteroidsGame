@@ -3,17 +3,18 @@ class Star //note that this class does NOT extend Floater
   //your code here
    double myX,myY,myAngle, mySpeed;
   Star(){
-    myX = myY = 0;
-    mySpeed = 3;
+    myX = Math.random()*700;
+    myY = Math.random()*700;
+    mySpeed = 2;
     myAngle = Math.random()*Math.PI*2;
   }
   void move(){
-    myX = myX + Math.cos(myAngle)*mySpeed;
+    myX = myX + Math.sin(myAngle)*mySpeed;
     myY = myY + Math.cos(myAngle)*mySpeed;
   }
   void show(){
-    fill(0);
-    stroke(0);
-    ellipse((float)myX,(float)myY,5,5);
+    fill(225);
+    stroke(225);
+    ellipse((float)myX,(float)myY,15,25);
   }
 }
