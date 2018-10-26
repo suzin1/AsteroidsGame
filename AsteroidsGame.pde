@@ -5,7 +5,7 @@ public void setup()
 {
   //your code here
   size(700,700);
-  stars = new Star[50];
+  stars = new Star[20];
   for (int i = 0; i < stars.length; i++){
     stars[i] = new Star();
   }
@@ -22,11 +22,11 @@ public void draw()
   stars[i].move();
   }
 }
-public void keyPressed(int a){
-  if (a==4){
-    bob.accelerate(2.5);
+public void keyPressed(){
+  if (key=='4'){
+    bob.accelerate(.1);
   }
-  if (a==5){
-    bob.turn((int)Math.random()*5);
+  if (key=='5'){
+    bob.turn(5);
   }
 }
