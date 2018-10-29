@@ -24,9 +24,12 @@ public void draw()
 }
 public void keyPressed(){
   if (key=='4'){
-    bob.accelerate(.1);
+    bob.accelerate(.05);
   }
   if (key=='5'){
     bob.turn(5);
   }
+  //if (key=='a'){
+  //  bob.turn(5);
+  //}
 }
