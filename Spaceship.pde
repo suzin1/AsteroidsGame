@@ -7,7 +7,7 @@ class Spaceship extends Floater
       int[] yS = {-8, 0, 8, 0};
       xCorners = xS;
       yCorners = yS;
-      myColor = 225;   
+      myColor = 196;   
       myCenterX = myCenterY = 350; //holds center coordinates   
       myDirectionX = myDirectionY = 0; //holds x and y coordinates of the vector for direction of travel   
       myPointDirection = 0;
