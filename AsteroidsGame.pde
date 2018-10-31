@@ -1,13 +1,18 @@
 //your variable declarations here
-Star [] stars;
+Asteroids [] stars;
+Star [] star;
 Spaceship bob = new Spaceship();
 public void setup() 
 {
   //your code here
   size(700,700);
-  stars = new Star[20];
+  star = new Star[50];
+  for (int i = 0; i < star.length; i++){
+    star[i] = new Star();
+  }
+  stars = new Asteroids[25];
   for (int i = 0; i < stars.length; i++){
-    stars[i] = new Star();
+    stars[i] = new Asteroids();
   }
 }
 public void draw() 
@@ -16,20 +21,29 @@ public void draw()
   background(0);
   bob.show();
   bob.move();
-  keyPressed();
   for (int i=0;i<stars.length;i++){
   stars[i].show();
   stars[i].move();
   }
+  for (int i=0;i<star.length;i++){
+  star[i].show();
+  }
 }
 public void keyPressed(){
-  if (key=='4'){
-    bob.accelerate(.05);
+  if (key=='a'){
+    bob.accelerate(.5);
   }
-  if (key=='5'){
-    bob.turn(5);
+  if (key=='w'){
+    bob.turn(15);
   }
-  //if (key=='a'){
-  //  bob.turn(5);
-  //}
+  if (key=='d'){
+    bob.accelerate(-.5);
+  }
+  if (key=='s'){
+    bob.setDirectionX(0);
+    bob.setDirectionY(0);
+    bob.setX((int)(Math.random()*650));
+    bob.setY((int)(Math.random()*650));
+    bob.setPointDirection((int)(Math.random()*180));
+  }
 }
