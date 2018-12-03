@@ -6,7 +6,7 @@ public void setup()
 {
   //your code here
   size(700,700);
-  star = new Star[100];
+  star = new Star[250];
   for (int i = 0; i < star.length; i++){
     star[i] = new Star();
   }
