@@ -9,11 +9,11 @@ class Asteroids extends Floater
       yCorners = yS;
       rotSpeed = Math.random()*.1;
       myColor = color(120,120,126);
-      myCenterX = 0;
-      myCenterY = 0;
+      myCenterX = Math.random()*700;
+      myCenterY = Math.random()*700;
       myPointDirection = 0;
-      myDirectionX = (Math.random()*10);
-      myDirectionY = (Math.random()*10);
+      myDirectionX = Math.random()*5;
+      myDirectionY = Math.random()*5;
   }
   public void move ()   //move the floater in the current direction of travel
   {      
