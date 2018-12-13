@@ -2,6 +2,7 @@
 Star [] star;
 ArrayList <Asteroids> stars = new ArrayList<Asteroids>();
 Spaceship bob = new Spaceship();
+ArrayList <Bullet> shoot = new ArrayList<Bullet>();
 public void setup() 
 {
   //your code here
@@ -30,9 +31,11 @@ public void draw()
     if (distance<10)
         stars.remove(i);
   }
-  bob.show();
-  bob.move();
+  for (int i = 0; i< shoot.size(); i++){
+    shoot.get(i).show();
+    shoot.get(i).move();
   }
+}
 
 public void keyPressed(){
   if (key=='a'){
@@ -50,5 +53,8 @@ public void keyPressed(){
     bob.setX((int)(Math.random()*650));
     bob.setY((int)(Math.random()*650));
     bob.setPointDirection((int)(Math.random()*180));
+  }
+  if (key == 'x'){
+    shoot.add(new Bullet(bob));
   }
 }
