@@ -9,7 +9,7 @@ public void setup()
   size(700,700);
   star = new Star[250];
   for (int i = 0; i < star.length; i++){
-    star[i] = new Star();
+    star[i] = new Star(); 
   }
   for (int i = 0; i < 25; i++){
     stars.add(new Asteroids());
