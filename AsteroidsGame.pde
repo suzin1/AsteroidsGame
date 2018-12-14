@@ -27,9 +27,19 @@ public void draw()
   for (int i=0;i<stars.size();i++){
   stars.get(i).show();
   stars.get(i).move();
-  float distance = dist((bob.getX()),(bob.getY()),(stars.get(i).getX()),(stars.get(i).getY()));
-    if (distance<10)
+//  float distance = dist((bob.getX()),(bob.getY()),(stars.get(i).getX()),(stars.get(i).getY()));
+//    if (distance<10)
+//        stars.remove(i);
+//  }
+  for(int a = 0; a<shoot.size(); a++){
+    float b = dist((shoot.get(a).getX()), (shoot.get(a).getY()), (stars.get(i).getX()), (stars.get(i).getY()));
+ if ( b < 10)
+      {
+        shoot.remove(a);
         stars.remove(i);
+        break;
+  }
+  }
   }
   for (int i = 0; i< shoot.size(); i++){
     shoot.get(i).show();
